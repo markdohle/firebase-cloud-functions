@@ -40,6 +40,8 @@ Functions can be deployed with firebase deploy.
 
 - Install dependencies for cloud functions.
 
+```cd functions; npm install; cd -```
+
 - Open your index.js file, uncomment the code, and save it.
 
 ```
@@ -57,3 +59,12 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 - Deploy to the cloud.
 
 ```firebase deploy```
+
+```https://us-central1-fir-practice-c5dc2.cloudfunctions.net/helloWorld```
+
+```https://console.firebase.google.com/project/fir-practice-c5dc2/overview```
+
+[Use a sample email automatic response function](https://github.com/firebase/functions-samples/tree/master/email-confirmation)
+
+In my case, I have two factor authentification for my google account. I needed to create a password for my app and the re-deploy my function. The instructions worked. Initially I failed. I tried to subscribe and unsubscribe without getting the app password. The buttons worked and the UI appeared to subscribe and unsubscribe, but no email was sent.
+
